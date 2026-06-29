@@ -1,0 +1,5 @@
+{
+  "model": "9router",
+  "messages": [{"role": "user", "content": "Hello"}],
+  "stream": true
+}
