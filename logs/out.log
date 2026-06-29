@@ -1,0 +1,64 @@
+2026-06-27 16:33:38: 
+2026-06-27 16:33:38:   ◈  render  mengkalibrasi gradient terminal
+2026-06-27 16:33:39:   ◈  boot  menyiapkan startup renderer · 100%
+2026-06-27 16:33:39: 
+2026-06-27 16:33:39: ███████╗ ██████╗██████╗  █████╗ ██╗   ██╗    ██████╗  ██████╗ ████████╗
+2026-06-27 16:33:39: ██╔════╝██╔════╝██╔══██╗██╔══██╗██║   ██║    ██╔══██╗██╔═══██╗╚══██╔══╝
+2026-06-27 16:33:39: ███████╗██║     ██████╔╝███████║██║   ██║    ██████╔╝██║   ██║   ██║   
+2026-06-27 16:33:39: ╚════██║██║     ██╔══██╗██╔══██║╚██╗ ██╔╝    ██╔══██╗██║   ██║   ██║   
+2026-06-27 16:33:39: ███████║╚██████╗██║  ██║██║  ██║ ╚████╔╝     ██████╔╝╚██████╔╝   ██║   
+2026-06-27 16:33:39: ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝      ╚═════╝  ╚═════╝    ╚═╝   
+2026-06-27 16:33:39:                                                                        
+2026-06-27 16:33:39:   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-27 16:33:39: 
+2026-06-27 16:33:39:   Scrav Bot        v2.5.0 · public
+2026-06-27 16:33:39:   neon startup aktif · aurora gradient · typing stream
+2026-06-27 16:33:39: 
+2026-06-27 16:33:39:   ✓  sistem  anti-crash aktif
+2026-06-27 16:33:39:   ✓  database  Multi-file database siap (debounced write setiap 5s)
+2026-06-27 16:33:39:   ✓  database  siap · mode: public, premium: 0, banned: 0
+2026-06-27 16:33:40: [LOG] Emoji versions: 0.6, 0.7, 1.0, 2.0, 3.0, 4.0, 5.0, 11.0, 12.0, 12.1, 13.0, 13.1, esq.latest, nfq.latest, xdd.latest
+2026-06-27 16:33:40: [LOG] EmojiDB loaded 4716 entries.
+2026-06-27 16:33:41: 
+2026-06-27 16:33:41:    plugins  710 total │ 34 kategori
+2026-06-27 16:33:41:   ──────────────────────────────────────────────────────────
+2026-06-27 16:33:41:   owner         141                      │  group         99                     
+2026-06-27 16:33:41:   rpg           59                       │  cek           48                     
+2026-06-27 16:33:41:   tools         41                       │  ai            36                     
+2026-06-27 16:33:41:   game          34                       │  fun           33                     
+2026-06-27 16:33:41:   +26 lainnya    219 
+2026-06-27 16:33:41: 
+2026-06-27 16:33:41:   ✓  plugin  710 plugin dimuat
+2026-06-27 16:33:41:   ◈  scheduler  Daily limit reset enabled at 00:00 (Asia/Jakarta)
+2026-06-27 16:33:41:   ✓  scheduler  Scheduler initialized
+2026-06-27 16:33:41:   ✓  boot  siap dalam 2540ms
+2026-06-27 16:33:41: ──────────────────────────────────────────────────────
+2026-06-27 16:33:41:   ◈  whatsapp  membuka jalur koneksi
+2026-06-27 16:33:42: 
+2026-06-27 16:33:42: ════════════════════════════════════════════════════
+2026-06-27 16:33:42:   ◐ Connecting — membangun sesi dan handshake
+2026-06-27 16:33:42: ════════════════════════════════════════════════════
+2026-06-27 16:33:42: 
+2026-06-27 16:33:45:   ◈  bot  Scrav Bot (6285960542212) � WA v2.3000.1035194821
+2026-06-27 16:33:45:   ✓  watchdog  aktif, batas waktu 30 menit
+2026-06-27 16:33:45:   ✓  whatsapp  siap menerima pesan
+2026-06-27 16:33:45:   ◈  autobackup  Auto backup is disabled
+2026-06-27 16:33:45: 
+2026-06-27 16:33:45: ════════════════════════════════════════════════════
+2026-06-27 16:33:45:   ● Connected — yntks
+2026-06-27 16:33:45: ════════════════════════════════════════════════════
+2026-06-27 16:33:45:   ◈  scheduler  Loaded 0 scheduled messages
+2026-06-27 16:33:45:   ◈  scheduler  Group schedule checker started (CronJob, every minute)
+2026-06-27 16:33:45:   ◈  scheduler  Sewa checker enabled (CronJob, every 10 minutes)
+2026-06-27 16:33:45:   ◈  scheduler  Daily limit reset enabled at 00:00 (Asia/Jakarta)
+2026-06-27 16:33:45:   ◈  scheduler  Loaded 0 scheduled messages
+2026-06-27 16:33:45:   ✓  scheduler  Scheduler initialized
+2026-06-27 16:33:45:   ◈  sholatscheduler  Prayer time scheduler started (CronJob, precise per-prayer)
+2026-06-27 16:33:45:   ◈  notifscheduler  0 notification CronJobs active (Asia/Jakarta)
+2026-06-27 16:33:45:   ◈  notifscheduler  Meal & sleep notification scheduler started (CronJob, precise per-time)
+2026-06-27 16:33:45:   ◈  otppoller  JasaOTP not configured, skipping poller
+2026-06-27 16:33:45:   ✓  memory  monitoring active, logging every 60s
+2026-06-27 16:33:45:   ✓  temp  auto-clean every 30m
+2026-06-27 16:33:45:   ✓  pruner  auto-prune >14d inactive, every 6h
+2026-06-27 16:33:45:   ✓  siap  semua sistem aktif
+2026-06-27 16:33:45: ──────────────────────────────────────────────────────
