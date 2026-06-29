@@ -1,13 +1,12 @@
-import axios from "axios";
 import config from "../../config.js";
 
 const pluginConfig = {
   name: "ai",
-  alias: ["9router", "nine", "router9"],
+  alias: ["openrouter", "or", "chat"],
   category: "ai",
-  description: "Chat dengan AI Model via 9Router gateway",
+  description: "Chat dengan AI Model via OpenRouter dengan Fallback Otomatis",
   usage: ".ai [model |] <pertanyaan>",
-  example: ".ai Apa kabar?\natau\n.ai ag/claude-sonnet-4-6 | buatkan puisi",
+  example: ".ai Apa kabar?\natau\n.ai google/gemini-2.5-flash | buatkan puisi",
   isOwner: false,
   isPremium: false,
   isGroup: false,
@@ -22,68 +21,102 @@ async function handler(m) {
 
   if (!query) {
     return m.reply(
-      `🤖 *ᴀɪ 𝟿ʀᴏᴜᴛᴇʀ*\n\n` +
-      `> Chat dengan AI Model via 9Router\n\n` +
+      `🤖 *ᴀɪ ᴏᴘᴇɴʀᴏᴜᴛᴇʀ*\n\n` +
+      `> Chat dengan AI Model via OpenRouter\n\n` +
       `*Cara Pakai:*\n` +
-      `> \`${m.prefix}ai <pertanyaan>\` (Default: combo 9router)\n` +
+      `> \`${m.prefix}ai <pertanyaan>\` (Default: Auto-fallback AI gratis)\n` +
       `> \`${m.prefix}ai <model> | <pertanyaan>\` (Custom Model)\n\n` +
       `*Contoh:*\n` +
       `> \`${m.prefix}ai halo, siapa kamu?\`\n` +
-      `> \`${m.prefix}ai ag/claude-sonnet-4-6 | buatkan puisi tentang laut\``
+      `> \`${m.prefix}ai google/gemini-2.5-flash | buatkan puisi tentang laut\``
     );
   }
 
   m.react("🕕");
 
-  let model = "9router"; // nama combo di dashboard 9Router
+  let customModel = "";
   let promptText = query;
 
+  // Mendukung penggunaan custom model jika ada karakter '|'
   if (query.includes("|")) {
     const parts = query.split("|");
-    model = parts[0].trim();
+    customModel = parts[0].trim();
     promptText = parts.slice(1).join("|").trim();
   }
 
-  let baseURL = config?.APIkey?.ninerouterBase || "http://100.102.247.119:20128/v1";
+  const apiKey = config?.APIkey?.openrouter || "";
+  if (!apiKey) {
+    m.react("☢");
+    return m.reply("❌ API Key OpenRouter belum diatur di config.js");
+  }
 
-  const apiKey = config?.APIkey?.ninerouter || "";
+  const historyChat = [
+    { role: "system", content: "Kamu adalah asisten WhatsApp bot yang serba tahu, ramah, dan menjawab dengan singkat." },
+    { role: "user", content: promptText }
+  ];
 
-  try {
-    const res = await axios.post(
-      `${baseURL}/chat/completions`,
-      {
-        model,
-        messages: [{ role: "user", content: promptText }],
-        stream: false
-      },
-      {
+  // Jika user menulis nama model secara spesifik, pakai itu saja.
+  // Jika tidak, gunakan sistem Array Fallback yang sangat kuat!
+  const fallbackModels = customModel 
+    ? [customModel] 
+    : [
+        "openrouter/free",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
+        "google/gemma-4-31b-it:free"
+      ];
+
+  const url = "https://openrouter.ai/api/v1/chat/completions";
+
+  for (let i = 0; i < fallbackModels.length; i++) {
+    const currentModel = fallbackModels[i];
+    
+    try {
+      const response = await fetch(url, {
+        method: "POST",
         headers: {
           "Authorization": `Bearer ${apiKey}`,
           "Content-Type": "application/json",
+          "HTTP-Referer": "http://localhost:3000",
+          "X-Title": "BotWA Native Fetch"
         },
-        timeout: 60000,
+        body: JSON.stringify({
+          model: currentModel,
+          messages: historyChat,
+          temperature: 0.7
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error?.message || `HTTP Error ${response.status}`);
       }
-    );
 
-    const fullText = res.data?.choices?.[0]?.message?.content || "";
+      const fullText = data.choices?.[0]?.message?.content || "";
+      if (!fullText) {
+        throw new Error("Tidak ada balasan teks dari API OpenRouter.");
+      }
 
-    if (!fullText) {
-      throw new Error("Tidak ada balasan dari 9Router.");
+      m.react("✅");
+      
+      // Ambil nama asli model yang sukses merespon (terutama berguna saat 'openrouter/free' mendistribusikan traffic)
+      const usedModel = data.model || currentModel;
+      
+      await m.reply(`🤖 *ᴀɪ* _(${usedModel})_\n\n${fullText}`);
+      
+      return; // Selesai, langsung keluar dari fungsi agar tidak lanjut ke loop fallback berikutnya
+
+    } catch (error) {
+      console.log(`[OpenRouter] Gagal di model ${currentModel} -> ${error.message}`);
+      
+      // Jika ini adalah loop/model terakhir dan masih gagal, kembalikan pesan error ke pengguna
+      if (i === fallbackModels.length - 1) {
+        m.react("☢");
+        return m.reply(`❌ *ɢᴀɢᴀʟ ᴍᴇɴɢʜᴜʙᴜɴɢɪ ᴀɪ*\n\n> *Error:* Semua sistem cadangan gagal/habis terpakai.\n> *Detail terakhir:* ${error.message}`);
+      }
+      
+      // Jika belum terakhir, maka loop akan berputar dan mencoba model fallback selanjutnya
     }
-
-    m.react("✅");
-    await m.reply(`🤖 *ᴀɪ* _(${model})_\n\n${fullText}`);
-  } catch (error) {
-    console.error("[9Router] Error:", error.response?.data || error.message);
-    m.react("☢");
-    const errorMsg =
-      error.response?.data?.error?.message ||
-      error.response?.data?.message ||
-      error.message ||
-      "Terjadi kesalahan internal.";
-    await m.reply(
-      `❌ *ɢᴀɢᴀʟ ᴍᴇɴɢʜᴜʙᴜɴɢɪ ᴀɪ*\n\n> *Error:* ${errorMsg}`
-    );
   }
 }
 
