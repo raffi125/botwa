@@ -69,20 +69,24 @@ async function handler(m) {
     );
 
     let fullText = "";
-    res.data.on("data", (chunk) => {
-      const lines = chunk.toString().split("\n");
-      for (const line of lines) {
-        if (line.startsWith("data: ") && line !== "data: [DONE]") {
-          try {
-            const parsed = JSON.parse(line.replace("data: ", ""));
-            const content = parsed.choices?.[0]?.delta?.content || "";
-            fullText += content;
-          } catch (e) {}
-        }
-      }
-    });
-
     await new Promise((resolve, reject) => {
+      res.data.on("data", (chunk) => {
+        const lines = chunk.toString().split("\n");
+        for (const line of lines) {
+          if (line.includes("data: [DONE]")) {
+            resolve();
+            return;
+          }
+          if (line.startsWith("data: ") && !line.includes("data: [DONE]")) {
+            try {
+              const parsed = JSON.parse(line.replace("data: ", ""));
+              const content = parsed.choices?.[0]?.delta?.content || "";
+              fullText += content;
+            } catch (e) {}
+          }
+        }
+      });
+
       res.data.on("end", resolve);
       res.data.on("error", reject);
     });
