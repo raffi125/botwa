@@ -45,9 +45,7 @@ async function handler(m) {
   }
 
   let baseURL = config?.APIkey?.ninerouterBase || "http://100.102.247.119:20128/v1";
-  if (baseURL === "http://192.168.100.59/v1" || baseURL === "http://192.168.100.59:20128/v1") {
-    baseURL = "http://100.102.247.119:20128/v1"; // bypass cache lama
-  }
+
   const apiKey = config?.APIkey?.ninerouter || "";
 
   try {
@@ -56,43 +54,21 @@ async function handler(m) {
       {
         model,
         messages: [{ role: "user", content: promptText }],
-        stream: true
+        stream: false
       },
       {
         headers: {
           "Authorization": `Bearer ${apiKey}`,
           "Content-Type": "application/json",
         },
-        responseType: "stream",
-        timeout: 30000,
+        timeout: 60000,
       }
     );
 
-    let fullText = "";
-    await new Promise((resolve, reject) => {
-      res.data.on("data", (chunk) => {
-        const lines = chunk.toString().split("\n");
-        for (const line of lines) {
-          if (line.includes("data: [DONE]")) {
-            resolve();
-            return;
-          }
-          if (line.startsWith("data: ") && !line.includes("data: [DONE]")) {
-            try {
-              const parsed = JSON.parse(line.replace("data: ", ""));
-              const content = parsed.choices?.[0]?.delta?.content || "";
-              fullText += content;
-            } catch (e) {}
-          }
-        }
-      });
-
-      res.data.on("end", resolve);
-      res.data.on("error", reject);
-    });
+    const fullText = res.data?.choices?.[0]?.message?.content || "";
 
     if (!fullText) {
-      throw new Error("Stream selesai tapi tidak ada teks balasan dari 9Router.");
+      throw new Error("Tidak ada balasan dari 9Router.");
     }
 
     m.react("✅");
