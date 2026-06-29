@@ -102,7 +102,15 @@ async function handler(m) {
       // Ambil nama asli model yang sukses merespon (terutama berguna saat 'openrouter/free' mendistribusikan traffic)
       const usedModel = data.model || currentModel;
       
-      await m.reply(`🤖 *ᴀɪ* _(${usedModel})_\n\n${fullText}`);
+      // Format markdown AI ke format WhatsApp
+      let waFormattedText = fullText
+        .replace(/\*\*(.*?)\*\*/g, '*$1*')  // Mengubah **bold** menjadi *bold* (standar WA)
+        .replace(/### (.*?)(\n|$)/g, '*$1*$2')   // Mengubah ### Heading menjadi *Heading*
+        .replace(/## (.*?)(\n|$)/g, '*$1*$2')    // Mengubah ## Heading menjadi *Heading*
+        .replace(/# (.*?)(\n|$)/g, '*$1*$2')     // Mengubah # Heading menjadi *Heading*
+        .replace(/~~(.*?)~~/g, '~$1~');     // Mengubah ~~coret~~ menjadi ~coret~
+        
+      await m.reply(waFormattedText);
       
       return; // Selesai, langsung keluar dari fungsi agar tidak lanjut ke loop fallback berikutnya
 
