@@ -76,7 +76,8 @@ const pluginConfig = {
 }
 
 async function handler(m, { sock }) {
-    const [nama,nominal] = m.text?.split(',')
+    const text = m.text || ''
+    const [nama, nominal] = text.split(',')
     if (!nama || !nominal) {
         return m.reply(`*FAKE BANK*\n\n> Masukkan teks untuk chat\n\n\`Contoh: ${m.prefix}fakebank Zann,10000\``)
     }

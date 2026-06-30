@@ -1,0 +1,339 @@
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\anime\autoanimewinbu.js
+   98:9  error  Expected a 'break' statement before 'case'  no-fallthrough
+  117:9  error  Expected a 'break' statement before 'case'  no-fallthrough
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\canvas\fakebankjago.js
+  79:28  error  Unsafe usage of optional chaining. If it short-circuits with 'undefined' the evaluation will throw TypeError  no-unsafe-optional-chaining
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekbaik.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekberat.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekbucin.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekcantik.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekcreative.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekgabut.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekgacha.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekgamer.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekganteng.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekgila.js
+  29:9  error  'desc:' is defined but never used  no-unused-labels
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekhoki.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekimut.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekintrovert.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekjahat.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekjodoh.js
+  28:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekjomblo.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekkarma.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekkaya.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekkece.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekkpopers.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\ceklapar.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekmalas.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekmesum.js
+  21:7  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekngantuk.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekotaku.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekoverpower.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekowner.js
+  21:9  error  The value assigned to 'targetNumber' is not used in subsequent statements  no-useless-assignment
+  22:9  error  The value assigned to 'targetJid' is not used in subsequent statements     no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekpelit.js
+  29:9  error  'desc:' is defined but never used  no-unused-labels
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekpintar.js
+  22:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekprocastinator.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekpsikopat.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekrezeki.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\ceksabar.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\ceksetia.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\ceksexy.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\ceksial.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\ceksisaumur.js
+  26:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\ceksocmed.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cektinggi.js
+  22:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cektsundere.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekumur.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekwibu.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\cek\cekyandere.js
+  21:9  error  The value assigned to 'desc' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\fun\cekkhodam.js
+  73:9  error  The value assigned to 'targetJid' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\fun\jodoh.js
+  144:7  error  The value assigned to 'label1' is not used in subsequent statements  no-useless-assignment
+  145:7  error  The value assigned to 'label2' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\game\tictactoe.js
+  68:9   error  The value assigned to 'pos' is not used in subsequent statements    no-useless-assignment
+  89:71  error  The value assigned to 'index' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\group\autoai.js
+  181:11  error  The value assigned to 'instruction' is not used in subsequent statements    no-useless-assignment
+  182:11  error  The value assigned to 'characterName' is not used in subsequent statements  no-useless-assignment
+  183:11  error  The value assigned to 'character' is not used in subsequent statements      no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\group\liststikerreply.js
+  20:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\bcpcjeda.js
+  40:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\custompayment.js
+  18:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\delsewa.js
+  40:9  error  The value assigned to 'groupId' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\jedabcgc.js
+  40:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\join.js
+  93:13  error  The value assigned to 'errorMsg' is not used in subsequent statements  no-useless-assignment
+  95:13  error  The value assigned to 'errorMsg' is not used in subsequent statements  no-useless-assignment
+  97:13  error  The value assigned to 'errorMsg' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\leave.js
+  36:9  error  The value assigned to 'targetGroupJid' is not used in subsequent statements  no-useless-assignment
+  37:9  error  The value assigned to 'groupName' is not used in subsequent statements       no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\stopbcgc.js
+  16:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\owner\stopbcpc.js
+  16:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\pushkontak\savenomor.js
+  30:9  error  The value assigned to 'targetNumber' is not used in subsequent statements  no-useless-assignment
+  31:9  error  The value assigned to 'nama' is not used in subsequent statements          no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\rpg\bank.js
+  25:9   error  The value assigned to 'user' is not used in subsequent statements    no-useless-assignment
+  43:13  error  The value assigned to 'amount' is not used in subsequent statements  no-useless-assignment
+  63:13  error  The value assigned to 'amount' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\rpg\beg.js
+  52:9  error  The value assigned to 'txt' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\rpg\boss.js
+  103:9  error  The value assigned to 'txt' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\rpg\buykoin.js
+  73:9  error  The value assigned to 'koinAmount' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\rpg\dungeon.js
+  80:9  error  The value assigned to 'txt' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\rpg\maling.js
+  103:7  error  The value assigned to 'txt' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\rpg\use.js
+  54:7  error  The value assigned to 'msg' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\search\nerdfont-ambil.js
+  46:5  error  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\search\nerdfont.js
+  46:5  error  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\search\pinvid.js
+  35:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\store\liststok.js
+  19:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\tools\tourl.js
+  270:7  error  The value assigned to 'mimetype' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\user\bataldaftar.js
+  20:1  error  Async function 'handler' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\plugins\user\profile.js
+  63:7  error  The value assigned to 'ppMedia' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-auto-anime.js
+  224:1  error  Async function 'formatSize' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-auto-backup.js
+  143:7  error  The value assigned to 'ms' is not used in subsequent statements  no-useless-assignment
+  181:1  error  Async function 'createBackup' has no 'await' expression          require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-auto-jpm.js
+  131:7  error  The value assigned to 'groupIds' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-data-pruner.js
+  13:24  error  'getDatabase' is not defined  no-undef
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-database.js
+  283:3  error  Async method 'migrateFromSingleFile' has no 'await' expression  require-await
+  321:3  error  Async method 'save' has no 'await' expression                   require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-exif.js
+  283:1  error  Async function 'isAnimatedWebp' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-fisch.js
+  332:7  error  The value assigned to 'applied' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-group-protection.js
+  804:1  error  Async function 'cacheMessageForAntiRemove' has no 'await' expression  require-await
+  986:1  error  Async function 'handleAntiJudol' has no 'await' expression            require-await
+  999:1  error  Async function 'handleAntiPhising' has no 'await' expression          require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-jadibot-manager.js
+  106:5  error  Async method 'loadMessage' has no 'await' expression            require-await
+  721:7  error  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+  728:1  error  Async function 'stopJadibot' has no 'await' expression          require-await
+  755:1  error  Async function 'stopAllJadibots' has no 'await' expression      require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-lid.js
+   66:9   error  The value assigned to 'pLid' is not used in subsequent statements  no-useless-assignment
+   67:9   error  The value assigned to 'pJid' is not used in subsequent statements  no-useless-assignment
+  304:1   error  Async function 'extractNumber' has no 'await' expression           require-await
+  327:9   error  The value assigned to 'pLid' is not used in subsequent statements  no-useless-assignment
+  328:9   error  The value assigned to 'pJid' is not used in subsequent statements  no-useless-assignment
+  397:11  error  The value assigned to 'pLid' is not used in subsequent statements  no-useless-assignment
+  398:11  error  The value assigned to 'pJid' is not used in subsequent statements  no-useless-assignment
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-message.js
+   36:1  error  Async function 'sendText' has no 'await' expression         require-await
+   54:1  error  Async function 'sendReply' has no 'await' expression        require-await
+  238:1  error  Async function 'sendContact' has no 'await' expression      require-await
+  267:1  error  Async function 'sendLocation' has no 'await' expression     require-await
+  287:1  error  Async function 'sendReact' has no 'await' expression        require-await
+  343:1  error  Async function 'forwardMessage' has no 'await' expression   require-await
+  357:1  error  Async function 'deleteMessage' has no 'await' expression    require-await
+  397:1  error  Async function 'sendWithPreview' has no 'await' expression  require-await
+  424:1  error  Async function 'sendMenu' has no 'await' expression         require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-otp-poller.js
+   10:1   error  Async function 'startOtpPoller' has no 'await' expression  require-await
+  119:38  error  'config' is not defined                                    no-undef
+  210:26  error  'config' is not defined                                    no-undef
+  227:1   error  Async function 'notifyUser' has no 'await' expression      require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-reconnect.js
+  77:1  error  Async function 'handleReconnect' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-scheduler.js
+   42:14  error  Async arrow function has no 'await' expression                        require-await
+   68:1   error  Async function 'scheduleMessage' has no 'await' expression            require-await
+  433:1   error  Async function 'startGroupScheduleChecker' has no 'await' expression  require-await
+  555:1   error  Async function 'startSewaChecker' has no 'await' expression           require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-serialize.js
+   768:40  error  Async arrow function has no 'await' expression  require-await
+   805:38  error  Async arrow function has no 'await' expression  require-await
+   965:55  error  Async arrow function has no 'await' expression  require-await
+   995:63  error  Async arrow function has no 'await' expression  require-await
+  1020:68  error  Async arrow function has no 'await' expression  require-await
+  1065:60  error  Async arrow function has no 'await' expression  require-await
+  1142:23  error  Async arrow function has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-similarity.js
+  1:1  error  Async function 'levenshteinDistance' has no 'await' expression  require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-socket.js
+  152:1   error  Async function 'simpleImageToWebp' has no 'await' expression          require-await
+  192:1   error  Async function 'extendSocket' has no 'await' expression               require-await
+  194:57  error  Async arrow function has no 'await' expression                        require-await
+  203:58  error  Async arrow function has no 'await' expression                        require-await
+  435:20  error  Async function has no 'await' expression                              require-await
+  485:9   error  The value assigned to 'payload' is not used in subsequent statements  no-useless-assignment
+  519:21  error  Async function has no 'await' expression                              require-await
+  575:58  error  Async arrow function has no 'await' expression                        require-await
+  751:5   error  Async arrow function has no 'await' expression                        require-await
+  860:5   error  Async arrow function has no 'await' expression                        require-await
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-store-backup.js
+   27:1   error  Async function 'createDatabaseBackup' has no 'await' expression  require-await
+  103:26  error  'config' is not defined                                          no-undef
+  134:18  error  'config' is not defined                                          no-undef
+
+C:\Users\Raffi\Kuliah_TI\coding_bot\OURIN3\src\lib\ourin-utils.js
+  173:9  error  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+  193:9  error  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+  211:9  error  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+  233:9  error  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+  411:1  error  Async function 'randomDelay' has no 'await' expression          require-await
+
+✖ 152 problems (152 errors, 0 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.

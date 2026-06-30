@@ -26,7 +26,7 @@ async function handler(m) {
     } else if (percent >= 50) {
         desc = 'Lumayan pelit 😅'
     } else if (percent >= 30) {
-        desc: 'Sedikit hemat 😊'
+        'Sedikit hemat 😊'
     } else {
         desc = 'Dermawan banget! 🎁'
     }

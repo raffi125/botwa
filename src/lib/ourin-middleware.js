@@ -82,7 +82,7 @@ function checkPermission(m, pluginConfig) {
     return { allowed: true, reason: "" }
 }
 
-function checkMode(m, getActiveJadibots) {
+function checkMode(m) {
     const db = getDatabase()
     const dbMode = db.setting("botMode")
     const mode = dbMode || config.config.mode || "public"
@@ -123,28 +123,6 @@ function checkMode(m, getActiveJadibots) {
     if (mode === "self") {
         if (m.fromMe) return { allowed: true }
         if (m.isOwner) return { allowed: true }
-
-        const activeJadibots = getActiveJadibots()
-        if (activeJadibots.length > 0) {
-            let jadibotList = ""
-            activeJadibots.forEach((jb, i) => {
-                jadibotList += `┃ ${i + 1}. @${jb.id}\n`
-            })
-            const mentions = activeJadibots.map((jb) => jb.id + "@s.whatsapp.net")
-            return {
-                allowed: false,
-                hasJadibots: true,
-                jadibotMessage:
-                    `🤖 *ᴍᴏᴅᴇ ᴘʀɪᴠᴀᴛᴇ*\n\n` +
-                    `Bot utama sedang dalam mode private.\n` +
-                    `Kamu bisa menggunakan bot turunan kami:\n\n` +
-                    `╭┈┈⬡「 📱 *ʙᴏᴛ ᴛᴇʀsᴇᴅɪᴀ* 」\n` +
-                    `${jadibotList}` +
-                    `╰┈┈⬡\n\n` +
-                    `> Pilih salah satu bot di atas untuk akses fitur.`,
-                jadibotMentions: mentions,
-            }
-        }
 
         return { allowed: false }
     }

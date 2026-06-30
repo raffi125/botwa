@@ -4,6 +4,7 @@ import { getDatabase } from './ourin-database.js'
 import { logger } from './ourin-logger.js'
 import * as jasaotp from './ourin-otp-service.js'
 import * as pakasir from './ourin-pakasir.js'
+import config from '../../config.js'
 let pollerInterval = null
 let sock = null
 

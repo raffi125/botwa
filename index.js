@@ -203,7 +203,7 @@ function setupAntiCrash() {
     logger.warn("system", `${warning.name}: ${warning.message}`);
   });
 
-  process.on("SIGINT", async () => {
+  process.on("SIGINT", () => {
     console.log("");
     logger.system("sistem", "sinyal berhenti diterima");
     logger.info("database", "menyimpan data...");
@@ -361,27 +361,7 @@ async function main() {
           _startOtp(sock);
         } catch {}
 
-        try {
-          const { getAllJadibotSessions, restartJadibotSession } =
-            await import("./src/lib/ourin-jadibot-manager.js");
-          const sessions = getAllJadibotSessions();
-          if (sessions.length > 0) {
-            logger.info("JADIBOT", `Restoring ${sessions.length} session(s)`);
-            for (const session of sessions) {
-              try {
-                await restartJadibotSession(sock, session.id);
-                await new Promise((r) => setTimeout(r, 3000));
-              } catch (e) {
-                logger.error(
-                  "JADIBOT",
-                  `Failed restore ${session.id}: ${e.message}`,
-                );
-              }
-            }
-          }
-        } catch (e) {
-          logger.error("JADIBOT", `Gagal memulihkan: ${e.message}`);
-        }
+
 
         const devLabel = config.dev?.enabled ? ` ${c.yellow("• dev")}` : "";
         startMemoryMonitor();

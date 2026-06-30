@@ -1,6 +1,5 @@
 import config from '../../config.js'
 import { getDatabase } from '../../src/lib/ourin-database.js'
-import { addJadibotOwner, removeJadibotOwner, getJadibotOwners } from '../../src/lib/ourin-jadibot-database.js'
 import fs from 'fs'
 import path from 'path'
 import { isLid, lidToJid,resolveAnyLidToJid, isLidConverted } from '../../src/lib/ourin-lid.js'
@@ -106,7 +105,7 @@ function removeFromOwnerPanels(targetNumber) {
     return false
 }
 
-async function handler(m, { sock, jadibotId, isJadibot }) {
+async function handler(m, { sock }) {
     const db = getDatabase()
     const cmd = m.command.toLowerCase()
     const groupMode = m.isGroup ? getGroupMode(m.chat, db) : 'private'
@@ -122,16 +121,7 @@ async function handler(m, { sock, jadibotId, isJadibot }) {
     if (!db.data.owner) db.data.owner = []
     
     if (isList) {
-        if (isJadibot && jadibotId) {
-            const jbOwners = getJadibotOwners(jadibotId)
-            if (jbOwners.length === 0) {
-                return m.reply(`📋 *ᴅᴀꜰᴛᴀʀ ᴏᴡɴᴇʀ ᴊᴀᴅɪʙᴏᴛ*\n\n> Belum ada owner terdaftar.\n> Gunakan \`${m.prefix}addowner\` untuk menambah.`)
-            }
-            let txt = `📋 *DAFTAR OWNER JADIBOT* — ${jadibotId}\n\n`
-            jbOwners.forEach((s, i) => { txt += `${i + 1}. \`${s}\`\n` })
-            txt += `\nTotal: *${jbOwners.length}* owner`
-            return m.reply(txt)
-        } else if (isCpanelMode) {
+        if (isCpanelMode) {
             const panelOwners = config.pterodactyl.ownerPanels || []
             const fullOwners = db.data.owner || []
             const allOwners = [...new Set([...panelOwners, ...fullOwners])]
@@ -172,24 +162,7 @@ async function handler(m, { sock, jadibotId, isJadibot }) {
         return m.reply(`❌ *ɢᴀɢᴀʟ*\n\n> Format nomor tidak valid`)
     }
     
-    if (isJadibot && jadibotId) {
-        if (isAdd) {
-            if (addJadibotOwner(jadibotId, targetNumber)) {
-                await m.react('👑')
-                return m.reply(`✅ Berhasil menambahkan *${targetNumber}* sebagai owner jadibot`)
-            } else {
-                return m.reply(`❌ \`${targetNumber}\` sudah menjadi owner Jadibot ini.`)
-            }
-        } else if (isDel) {
-            if (removeJadibotOwner(jadibotId, targetNumber)) {
-                await m.react('✅')
-                return m.reply(`✅ Berhasil menghapus *${targetNumber}* dari owner jadibot`)
-            } else {
-                return m.reply(`❌ \`${targetNumber}\` bukan owner Jadibot ini.`)
-            }
-        }
-        return
-    }
+
     
     if (isCpanelMode) {
         if (isAdd) {

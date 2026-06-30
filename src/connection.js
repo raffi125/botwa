@@ -304,7 +304,7 @@ async function startConnection(options = {}) {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 3000));
-      const code = await sock.requestPairingCode(phoneNumber, "ScravBotNAI");
+      const code = await sock.requestPairingCode(phoneNumber, "SCRAVBOT");
       console.log("");
       console.log(
         colors.createBanner(
@@ -359,29 +359,29 @@ async function startConnection(options = {}) {
       const sc = d?.error?.output?.statusCode;
 
       const STATUS_MESSAGES = {
-        400: "?? Bad Request — Pesan/request tidak valid, coba restart",
-        401: "?? Unauthorized — Session expired, perlu login ulang",
-        403: "?? Forbidden — Akses ditolak oleh WhatsApp, cek nomor",
-        404: "? Not Found — Resource tidak ditemukan",
-        405: "?? Method Not Allowed — Operasi tidak diizinkan",
-        408: "?? Timeout — Koneksi timeout, cek internet",
-        410: "?? Gone — Session dihapus dari server, restart",
-        428: "?? Connection Required — Perlu reconnect",
-        440: "? Session Conflict — Login di perangkat lain",
-        500: "?? Internal Server Error — Server WhatsApp error",
-        501: "?? Not Implemented — Fitur belum didukung server",
-        502: "?? Bad Gateway — Server WhatsApp tidak merespons",
-        503: "?? Service Unavailable — WhatsApp sedang maintenance",
-        504: "?? Gateway Timeout — Server WhatsApp terlalu lama merespons",
-        515: "?? Restart Required — WhatsApp minta restart koneksi",
+        400: "?? Bad Request ï¿½ Pesan/request tidak valid, coba restart",
+        401: "?? Unauthorized ï¿½ Session expired, perlu login ulang",
+        403: "?? Forbidden ï¿½ Akses ditolak oleh WhatsApp, cek nomor",
+        404: "? Not Found ï¿½ Resource tidak ditemukan",
+        405: "?? Method Not Allowed ï¿½ Operasi tidak diizinkan",
+        408: "?? Timeout ï¿½ Koneksi timeout, cek internet",
+        410: "?? Gone ï¿½ Session dihapus dari server, restart",
+        428: "?? Connection Required ï¿½ Perlu reconnect",
+        440: "? Session Conflict ï¿½ Login di perangkat lain",
+        500: "?? Internal Server Error ï¿½ Server WhatsApp error",
+        501: "?? Not Implemented ï¿½ Fitur belum didukung server",
+        502: "?? Bad Gateway ï¿½ Server WhatsApp tidak merespons",
+        503: "?? Service Unavailable ï¿½ WhatsApp sedang maintenance",
+        504: "?? Gateway Timeout ï¿½ Server WhatsApp terlalu lama merespons",
+        515: "?? Restart Required ï¿½ WhatsApp minta restart koneksi",
       };
 
       const statusMsg = STATUS_MESSAGES[sc] || `? Unknown (kode: ${sc})`;
-      colors.logger.warn("whatsapp", `terputus — ${statusMsg}`);
+      colors.logger.warn("whatsapp", `terputus ï¿½ ${statusMsg}`);
       if (sc === DisconnectReason.loggedOut || sc === 401) {
         colors.logger.error(
           "whatsapp",
-          "sesi habis — hapus folder storage lalu restart",
+          "sesi habis ï¿½ hapus folder storage lalu restart",
         );
         connectionState.reconnectAttempts = 0;
         return;
@@ -398,7 +398,7 @@ async function startConnection(options = {}) {
         } else {
           colors.logger.error(
             "whatsapp",
-            "konflik sesi — perangkat lain terdeteksi, matikan bot yang lain",
+            "konflik sesi ï¿½ perangkat lain terdeteksi, matikan bot yang lain",
           );
           connectionState.reconnectAttempts = 0;
         }
@@ -440,7 +440,7 @@ async function startConnection(options = {}) {
 
       colors.logger.info(
         "bot",
-        `${config.bot?.name || "SCRAVBOT"} (${n || "?"}) · WA v${version.join(".")}`,
+        `${config.bot?.name || "SCRAVBOT"} (${n || "?"}) ï¿½ WA v${version.join(".")}`,
       );
 
       setTimeout(async () => {

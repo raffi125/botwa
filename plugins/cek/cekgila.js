@@ -26,7 +26,7 @@ async function handler(m) {
     } else if (percent >= 50) {
         desc = 'Lumayan waras 😅'
     } else if (percent >= 30) {
-        desc: 'Normal kok 🙂'
+        'Normal kok 🙂'
     } else {
         desc = 'Waras banget! 😇'
     }

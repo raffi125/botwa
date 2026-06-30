@@ -1,6 +1,5 @@
 import config from '../../config.js'
 import { getDatabase } from '../../src/lib/ourin-database.js'
-import { addJadibotPremium, removeJadibotPremium, getJadibotPremiums } from '../../src/lib/ourin-jadibot-database.js'
 const pluginConfig = {
     name: 'addprem',
     alias: ['addpremium', 'setprem', 'delprem', 'delpremium', 'listprem', 'premlist'],
@@ -28,7 +27,7 @@ function extractTarget(m) {
     return ''
 }
 
-async function handler(m, { sock, jadibotId, isJadibot }) {
+async function handler(m, { sock }) {
     const db = getDatabase()
     const cmd = m.command.toLowerCase()
 
@@ -39,19 +38,7 @@ async function handler(m, { sock, jadibotId, isJadibot }) {
     if (!db.data.premium) db.data.premium = []
 
     if (isList) {
-        if (isJadibot && jadibotId) {
-            const jbPremiums = getJadibotPremiums(jadibotId)
-            if (jbPremiums.length === 0) {
-                return m.reply(`💎 Belum ada premium di jadibot ini\nGunakan \`${m.prefix}addprem\` untuk menambah`)
-            }
-            let txt = `💎 *DAFTAR PREMIUM JADIBOT* — ${jadibotId}\n\n`
-            jbPremiums.forEach((p, i) => {
-                const num = typeof p === 'string' ? p : p.jid
-                txt += `${i + 1}. \`${num}\`\n`
-            })
-            txt += `\nTotal: *${jbPremiums.length}* premium`
-            return m.reply(txt)
-        }
+
 
         if (db.data.premium.length === 0) {
             return m.reply(`💎 Belum ada premium terdaftar`)
@@ -84,24 +71,7 @@ async function handler(m, { sock, jadibotId, isJadibot }) {
         return m.reply(`❌ Format nomor tidak valid`)
     }
 
-    if (isJadibot && jadibotId) {
-        if (isAdd) {
-            if (addJadibotPremium(jadibotId, targetNumber)) {
-                await m.react('💎')
-                return m.reply(`✅ Berhasil menambahkan *${targetNumber}* sebagai premium jadibot`)
-            } else {
-                return m.reply(`❌ \`${targetNumber}\` sudah premium di Jadibot ini`)
-            }
-        } else if (isDel) {
-            if (removeJadibotPremium(jadibotId, targetNumber)) {
-                await m.react('✅')
-                return m.reply(`✅ Berhasil menghapus *${targetNumber}* dari premium jadibot`)
-            } else {
-                return m.reply(`❌ \`${targetNumber}\` bukan premium di Jadibot ini`)
-            }
-        }
-        return
-    }
+
 
     if (isAdd) {
         const existingIndex = db.data.premium.findIndex(p =>

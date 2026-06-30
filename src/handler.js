@@ -56,12 +56,7 @@ import {
   getCachedGroup,
   getCachedSetting,
 } from "./lib/ourin-performance.js";
-import {
-  isJadibotOwner,
-  isJadibotPremium,
-  loadJadibotDb,
-} from "./lib/ourin-jadibot-database.js";
-import { getActiveJadibots } from "./lib/ourin-jadibot-manager.js";
+// Jadibot removed
 import { handleCommand as handleCaseCommand } from "../case/ourin.js";
 import { RateLimiterMemory } from "rate-limiter-flexible";
 import { games as ScravBotGames } from "./lib/ourin-games.js";
@@ -501,7 +496,7 @@ async function isSpamming(jid) {
  * });
  */
 async function messageHandler(msg, sock, options = {}) {
-  const isJadibot = options.isJadibot || false;
+  const isJadibot = false;
   try {
     let m;
     try {
@@ -537,14 +532,7 @@ async function messageHandler(msg, sock, options = {}) {
       return;
     }
 
-    const jadibotId = options.jadibotId || null;
-    if (isJadibot && jadibotId) {
-      const botJid = sock.user?.id?.split(":")[0] + "@s.whatsapp.net";
-      const senderNum = m.sender?.replace(/[^0-9]/g, "") || "";
-      const botNum = botJid.replace(/[^0-9]/g, "");
-      m.isOwner = isJadibotOwner(jadibotId, m.sender) || senderNum === botNum;
-      m.isPremium = isJadibotPremium(jadibotId, m.sender) || m.isOwner;
-    }
+    // Jadibot logic removed
 
     if (config.features?.logMessage) {
       let groupName = "PRIVATE";
@@ -695,21 +683,10 @@ async function messageHandler(msg, sock, options = {}) {
       }
     }
 
-    const modeCheck = checkMode(m, getActiveJadibots);
+    const modeCheck = checkMode(m);
     if (!modeCheck.allowed) {
       if (modeCheck.isAfk && m.isCommand) {
         await m.reply(modeCheck.afkMessage);
-      } else if (modeCheck.hasJadibots && m.isCommand && !isJadibot) {
-        await sock.sendMessage(
-          m.chat,
-          {
-            text: modeCheck.jadibotMessage,
-            contextInfo: {
-              mentionedJid: modeCheck.jadibotMentions,
-            },
-          },
-          { quoted: m },
-        );
       }
       return;
     }
