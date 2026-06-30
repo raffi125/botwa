@@ -1442,8 +1442,8 @@ async function messageHandler(msg, sock, options = {}) {
       plugins: {
         count: getPluginCount(),
       },
-      jadibotId: jadibotId,
-      isJadibot: isJadibot,
+      jadibotId: null,
+      isJadibot: false,
     };
 
     await plugin.handler(m, context);

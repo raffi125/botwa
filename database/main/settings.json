@@ -45,6 +45,21 @@
   "errorLog": [
     {
       "cmd": "unknown",
+      "err": "jadibotId is not defined",
+      "at": 1782835916362
+    },
+    {
+      "cmd": "unknown",
+      "err": "jadibotId is not defined",
+      "at": 1782835905102
+    },
+    {
+      "cmd": "unknown",
+      "err": "jadibotId is not defined",
+      "at": 1782835827506
+    },
+    {
+      "cmd": "unknown",
       "err": "Connection Closed",
       "at": 1782551575824
     },

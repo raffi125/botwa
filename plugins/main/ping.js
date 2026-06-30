@@ -104,7 +104,7 @@ async function handler(m, { sock }) {
   await m.react("⏱️");
 
   try {
-    sock.sendPresenceUpdate("composing", m.chat).catch(() => {});
+    try { await sock.sendPresenceUpdate("composing", m.chat); } catch {}
     const t0 = m.messageTimestamp ? m.messageTimestamp * 1000 : Date.now();
     const waRoundtrip = Math.max(1, Date.now() - t0);
 
@@ -285,6 +285,7 @@ async function handler(m, { sock }) {
     await m.react("✅");
   } catch (error) {
     console.log(error);
+    try { fs.writeFileSync('error_ping.txt', String(error.stack || error)); } catch {}
     await m.react("❌");
     m.reply(te(m.prefix, m.command, m.pushName));
   }
